@@ -1,9 +1,8 @@
 import requests
-import time
 from datetime import datetime
 
 PLAYLIST_URL = "https://akashgo.rootmaster.xyz/?api=iptv_m3u"
-OUTPUT_FILE = "playlist.m3u"
+OUTPUT_FILE = "AkashGo.playlist.m3u"   # <-- updated filename
 
 def update_playlist():
     try:
