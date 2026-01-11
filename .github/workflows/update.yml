@@ -2,20 +2,20 @@ name: Auto Update Playlists
 
 on:
   schedule:
-    - cron: "30 * * * *"   # প্রতি ঘণ্টার ৩০ মিনিটে রান করবে
-  workflow_dispatch:        # ম্যানুয়ালি রান করার সুযোগ
+    - cron: "0 * * * *"  # প্রতি ১ ঘণ্টায় run করবে (runs every hour at minute 0)
+  workflow_dispatch:      # ম্যানুয়ালি রান করার সুযোগ রাখবে (manual trigger option)
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write   # allow pushing changes back to the repo
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # পুরো history আনবে
+          fetch-depth: 0   # পুরো history আনবে (fetch full history)
 
       - name: Set up Python
         uses: actions/setup-python@v5
