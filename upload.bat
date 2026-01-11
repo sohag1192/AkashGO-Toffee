@@ -26,4 +26,4 @@ REM Commit changes
 git commit -m "Initial commit with all files"
 
 REM Push to GitHub (first time with upstream)
-git push -u origin main
+git push origin main
