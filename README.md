@@ -15,4 +15,9 @@
 * Add This PlayList [Playlist Link](https://raw.githubusercontent.com/sohag1192/testing/refs/heads/main/playlist.m3u)
 
 
+Copy Url: 
+
+    https://raw.githubusercontent.com/sohag1192/testing/refs/heads/main/playlist.m3u
+
+
 😊 😊 Enjoy 😊😊
