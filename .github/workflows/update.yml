@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # পুরো history আনবে, rebase সহজ হবে
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,5 +36,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add playlist.m3u toffee_formatted.json
-          git commit -m "Auto update playlists at $(date)" || echo "No changes to commit"
-          git push
+          git commit -m "Auto update playlists at $(date -u '+%Y-%m-%d %H:%M:%S UTC+6')" || echo "No changes to commit"
+          git pull --rebase origin main
+          git push origin main
