@@ -12,54 +12,44 @@ DEFAULT_HEADERS = {
     "accept-encoding": "gzip"
 }
 
-def parse_m3u(m3u_text):
-    lines = m3u_text.strip().splitlines()
-    channels = []
-    for i in range(len(lines)):
-        if lines[i].startswith("#EXTINF"):
-            # Example: #EXTINF:-1 tvg-id="id" tvg-logo="logo.png", Channel Name
-            info_line = lines[i]
-            link_line = lines[i+1] if i+1 < len(lines) else ""
-
-            # Extract logo
-            logo = ""
-            if 'tvg-logo="' in info_line:
-                logo = info_line.split('tvg-logo="')[1].split('"')[0]
-
-            # Extract name (after comma)
-            name = info_line.split(",")[-1].strip()
-
-            channels.append({
-                "category_name": "Toffee Live",
-                "name": name,
-                "link": link_line,
-                "headers": DEFAULT_HEADERS,
-                "logo": logo
-            })
-    return channels
-
 def generate_formatted_json():
     print("⏳ Fetching data from:", M3U_URL)
     r = requests.get(M3U_URL)
     r.raise_for_status()
 
-    channels = parse_m3u(r.text)
+    try:
+        raw_channels = json.loads(r.text)
+    except json.JSONDecodeError as e:
+        print("❌ Error: File is not valid JSON.\n", e)
+        return
+
+    response_data = []
+    for ch in raw_channels:
+        response_data.append({
+            "category_name": "Toffee Live",
+            "name": ch.get("name", ""),
+            "link": ch.get("link", ""),
+            "headers": {
+                **DEFAULT_HEADERS,
+                "cookie": ch.get("cookie", "")
+            },
+            "logo": ch.get("logo", "")
+        })
 
     final_json = {
         "status": "success",
         "name": "Toffee Live Channels",
-        "owner": "Sohag1192",
-        "Credits": "BINOD-XD",
-        "channels_amount": len(channels),
+        "owner": "Sohag & Credits: BINOD-XD",
+        "channels_amount": len(response_data),
         "Last_update": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "response": channels
+        "response": response_data
     }
 
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(final_json, f, indent=4, ensure_ascii=False)
 
     print(f"✅ JSON updated successfully: {OUTPUT_JSON}")
-    print(f"Total channels: {len(channels)}")
+    print(f"Total channels: {len(response_data)}")
 
 if __name__ == "__main__":
     generate_formatted_json()

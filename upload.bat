@@ -27,3 +27,5 @@ git commit -m "Initial commit with all files"
 
 REM Push to GitHub (first time with upstream)
 git push origin main
+git push origin main --force
+
