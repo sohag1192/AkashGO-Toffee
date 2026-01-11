@@ -39,7 +39,8 @@ def generate_formatted_json():
     final_json = {
         "status": "success",
         "name": "Toffee Live Channels",
-        "owner": "Padma Flix",
+        "owner": "Sohag1192",
+        "Credits": "BINOD-XD",
         "channels_amount": len(response_data),
         "Last_update": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "response": response_data
