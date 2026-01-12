@@ -2,8 +2,8 @@ name: Auto Update Playlists
 
 on:
   schedule:
-    - cron: "0 * * * *"  # প্রতি ১ ঘণ্টায় run করবে (runs every hour at minute 0)
-  workflow_dispatch:      # ম্যানুয়ালি রান করার সুযোগ রাখবে (manual trigger option)
+    - cron: "0 * * * *"   # প্রতি ১ ঘণ্টায় run করবে (runs every hour at minute 0)
+  workflow_dispatch:        # ম্যানুয়ালি রান করার সুযোগ রাখবে (manual trigger option)
 
 jobs:
   build:
@@ -23,11 +23,14 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+      # Run your AkashGo updater (saves both .m3u and JSON)
       - name: Update AkashGo playlist
         run: python update_playlist.py
 
+      # Run your Toffee JSON generator
       - name: Generate Toffee JSON
         run: python generate_json.py
 
@@ -36,6 +39,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add AkashGo.playlist.m3u
+          git add AkashGo_formatted.json
           git add toffee_formatted.json
           git commit -m "Auto update playlists at $(date -u '+%Y-%m-%d %H:%M:%S UTC+6')" || echo "No changes to commit"
-          git push origin main --force
+          git push origin main
