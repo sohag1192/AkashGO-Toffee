@@ -2,20 +2,20 @@ name: Auto Update Playlists
 
 on:
   schedule:
-    - cron: "0 * * * *"   # প্রতি ১ ঘণ্টায় run করবে (runs every hour at minute 0)
-  workflow_dispatch:        # ম্যানুয়ালি রান করার সুযোগ রাখবে (manual trigger option)
+    - cron: "*/30 * * * *"   # প্রতি ৩০ মিনিটে run করবে (runs every 30 minutes)
+  workflow_dispatch:          # ম্যানুয়ালি রান করার সুযোগ রাখবে (manual trigger option)
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write   # allow pushing changes back to the repo
+      contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # পুরো history আনবে (fetch full history)
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -26,11 +26,9 @@ jobs:
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      # Run your AkashGo updater (saves both .m3u and JSON)
       - name: Update AkashGo playlist
         run: python update_playlist.py
 
-      # Run your Toffee JSON generator
       - name: Generate Toffee JSON
         run: python generate_json.py
 
