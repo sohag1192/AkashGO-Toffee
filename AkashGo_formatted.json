@@ -3,7 +3,7 @@
     "name": "AkashGo Playlist",
     "owner": "Sohag (formatted version)",
     "channels_amount": 32,
-    "Last_update": "2026-01-12 13:42:50",
+    "Last_update": "2026-01-12 14:27:00",
     "response": [
         {
             "name": "BPL",
@@ -12,6 +12,10 @@
         {
             "name": "LALIGA Live 1",
             "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1730/output/index.mpd"
+        },
+        {
+            "name": "Sony Sports TEN 2",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1726/output/index.mpd"
         },
         {
             "name": "Star Sports 1 HD",
@@ -56,10 +60,6 @@
         {
             "name": "Euro Sports HD",
             "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1712/output/index.mpd"
-        },
-        {
-            "name": "Sony Sports TEN 2",
-            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1726/output/index.mpd"
         },
         {
             "name": "Sony AATH",
