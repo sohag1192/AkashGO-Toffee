@@ -1,0 +1,137 @@
+{
+    "status": "success",
+    "name": "AkashGo Playlist",
+    "owner": "Sohag (formatted version)",
+    "channels_amount": 32,
+    "Last_update": "2026-01-12 05:04:09",
+    "response": [
+        {
+            "name": "BPL",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1707/output/index.mpd"
+        },
+        {
+            "name": "LALIGA Live 1",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1730/output/index.mpd"
+        },
+        {
+            "name": "Star Sports 1 HD",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1720/output/index.mpd"
+        },
+        {
+            "name": "Star Sports Select 1 HD",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1708/output/index.mpd"
+        },
+        {
+            "name": "Somoy TV",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/index.m3u8"
+        },
+        {
+            "name": "Star Sports 2 HD",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1728/output/index.mpd"
+        },
+        {
+            "name": "Jamuna TV",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1701/output/index.m3u8"
+        },
+        {
+            "name": "Deepto TV HD",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1711/output/index.m3u8"
+        },
+        {
+            "name": "Sony Sports TEN 1",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1719/output/index.mpd"
+        },
+        {
+            "name": "Ten Cricket",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1727/output/index.mpd"
+        },
+        {
+            "name": "Star Sports Select 2 HD",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1710/output/index.mpd"
+        },
+        {
+            "name": "Sony Sports TEN 5",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1717/output/index.mpd"
+        },
+        {
+            "name": "Euro Sports HD",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1712/output/index.mpd"
+        },
+        {
+            "name": "Sony Sports TEN 2",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1726/output/index.mpd"
+        },
+        {
+            "name": "Sony AATH",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1732/output/index.mpd"
+        },
+        {
+            "name": "SRK TV",
+            "link": "https://srknowapp.ncare.live/srktvhlswodrm/srktv.stream/playlist.m3u8"
+        },
+        {
+            "name": "Al Jazeera",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1721/output/index.m3u8"
+        },
+        {
+            "name": "Sony Entertainment",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1718/output/index.mpd"
+        },
+        {
+            "name": "Channel I HD",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1723/output/index.m3u8"
+        },
+        {
+            "name": "ATN Bangla",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1722/output/index.m3u8"
+        },
+        {
+            "name": "STAR GOLD",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1729/output/index.mpd"
+        },
+        {
+            "name": "ZEE BANGLA",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1714/output/index.mpd"
+        },
+        {
+            "name": "Star Jalsha HD",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1713/output/index.mpd"
+        },
+        {
+            "name": "Jalsha Movies",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1724/output/index.mpd"
+        },
+        {
+            "name": "Independent TV",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1704/output/index.m3u8"
+        },
+        {
+            "name": "Star Movies HD",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1725/output/index.mpd"
+        },
+        {
+            "name": "ATN News",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1706/output/index.m3u8"
+        },
+        {
+            "name": "Bangla Vision",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1715/output/index.m3u8"
+        },
+        {
+            "name": "Channel 24 HD",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1703/output/index.m3u8"
+        },
+        {
+            "name": "Ekattor HD",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1705/output/index.m3u8"
+        },
+        {
+            "name": "NTV",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1716/output/index.m3u8"
+        },
+        {
+            "name": "BTV",
+            "link": "https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/index.m3u8"
+        }
+    ]
+}
