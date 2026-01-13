@@ -1,0 +1,39 @@
+name: Auto Update akashgo Playlists
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # প্রতি ৩০ মিনিটে run করবে (runs every 30 minutes)
+  workflow_dispatch:          # ম্যানুয়ালি রান করার সুযোগ রাখবে (manual trigger option)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Update AkashGo playlist
+        run: python update_playlist.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add AkashGo.playlist.m3u
+          git commit -m "Auto update Akashgo playlists at $(date -u '+%Y-%m-%d %H:%M:%S UTC+6')" || echo "No changes to commit"
+          git push origin main --force        with:
+          packages-dir: dist/
