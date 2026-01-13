@@ -33,7 +33,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add AkashGo.playlist.m3u
+          git commit -a
+          git add playlist.m3u
           git commit -m "Auto update Akashgo playlists at $(date -u '+%Y-%m-%d %H:%M:%S UTC+6')" || echo "No changes to commit"
-          git push origin main --force        with:
-          packages-dir: dist/
+          git push origin main --force
