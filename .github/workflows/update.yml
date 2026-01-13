@@ -29,8 +29,6 @@ jobs:
       - name: Update AkashGo playlist
         run: python update_playlist.py
         
-        - name: Update AkashGo m3u playlist
-        run: python playlist.py
         
 
       - name: Generate Toffee JSON
