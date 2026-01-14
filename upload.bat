@@ -4,7 +4,7 @@ REM GitHub Upload Script for AkashGo
 REM ================================
 
 REM Change to your project directory
-cd /d "C:\Users\sohag\Downloads\AkashGO"
+cd /d "C:\Users\sohag\Downloads\testing"
 
 REM Initialize Git if not already done
 IF NOT EXIST .git (
@@ -14,18 +14,15 @@ IF NOT EXIST .git (
     git remote add origin https://github.com/sohag1192/testing.git
 )
 
-REM Create README.md only if it doesn’t exist
-IF NOT EXIST README.md (
-    echo # testing > README.md
-)
 
 REM Stage ALL files in the folder
 git add .
 
 REM Commit changes
-git commit -m "Initial commit with all files"
+git commit -m "Automated commit via batch file"
 
-REM Push to GitHub (first time with upstream)
-git push origin main
-git push origin main --force
+REM Push to GitHub
+git push -u origin main
+
+pause
 

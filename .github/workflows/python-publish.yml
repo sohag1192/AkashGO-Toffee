@@ -1,39 +1,58 @@
-name: Auto Update akashgo Playlists
+name: Update IPTV Playlist
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # প্রতি ৩০ মিনিটে run করবে (runs every 30 minutes)
-  workflow_dispatch:          # ম্যানুয়ালি রান করার সুযোগ রাখবে (manual trigger option)
+    # Run every 30 minutes
+    - cron: "*/30 * * * *"
+  workflow_dispatch:   # allow manual trigger
 
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
+      # Checkout your repo
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
+      # Set up Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: '3.x'
 
-      - name: Install dependencies
+      # Install dependencies
+      - name: Install requests
+        run: pip install requests
+
+      # Run your update script
+      - name: Fetch and update playlist
         run: |
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          python3 <<'EOF'
+          import requests, os
+          from datetime import datetime
 
-      - name: Update AkashGo playlist
-        run: python playlist.py
+          PLAYLIST_URL = "https://akashgo.rootmaster.xyz/?api=iptv_m3u"
+          OUTPUT_FILE = "playlist/iptv.m3u"
 
+          os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+
+          try:
+              print(f"[{datetime.now()}] Fetching playlist...")
+              response = requests.get(PLAYLIST_URL, timeout=30)
+              response.raise_for_status()
+              with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+                  f.write(response.text)
+              print(f"[{datetime.now()}] Playlist updated successfully -> {OUTPUT_FILE}")
+          except Exception as e:
+              print(f"[{datetime.now()}] Error updating playlist: {e}")
+          EOF
+
+      # Commit and push changes
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git commit -a
-          git add playlist.m3u
-          git commit -m "Auto update Akashgo playlists at $(date -u '+%Y-%m-%d %H:%M:%S UTC+6')" || echo "No changes to commit"
-          git push origin main --force
+          git add playlist/iptv.m3u
+          git commit -m "Auto-update playlist [skip ci]" || echo "No changes to commit"
+          git push
