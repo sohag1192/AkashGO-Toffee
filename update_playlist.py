@@ -4,9 +4,8 @@ from datetime import datetime
 
 PLAYLIST_URL = "https://akashgo.rootmaster.xyz/?api=iptv_m3u"
 OUTPUT_JSON = "AkashGo_formatted.json"
-OUTPUT_M3U = "AkashGo.playlist.m3u"
 
-def generate_formatted_playlist():
+def generate_formatted_json():
     print(f"⏳ Fetching data from: {PLAYLIST_URL}")
     try:
         response = requests.get(PLAYLIST_URL, timeout=30)
@@ -15,26 +14,42 @@ def generate_formatted_playlist():
         print(f"❌ Error fetching playlist: {e}")
         return
 
-    # Save raw M3U file
-    with open(OUTPUT_M3U, "w", encoding="utf-8") as f:
-        f.write(response.text)
-    print(f"📺 M3U playlist saved -> {OUTPUT_M3U}")
-
-    # Split playlist lines
     lines = response.text.strip().splitlines()
 
     channels = []
     current_channel = {}
 
     for line in lines:
-        if line.startswith("#EXTINF:"):
-            # Extract channel name after comma
+        if line.startswith("#KODIPROP:"):
+            # Kodi property line, split into key/value
             try:
-                name = line.split(",")[-1].strip()
+                key, value = line.replace("#KODIPROP:", "").split("=", 1)
+                current_channel[key.strip()] = value.strip()
             except Exception:
-                name = "Unknown"
-            current_channel = {"name": name, "link": ""}
+                pass
+
+        elif line.startswith("#EXTINF:"):
+            # Extract attributes from EXTINF line
+            try:
+                # Example: #EXTINF:-1 tvg-id="1" tvg-name="BPL" ...
+                parts = line.split(",")
+                info = parts[0]
+                name = parts[-1].strip()
+
+                # Parse attributes like tvg-id, tvg-name, tvg-logo, group-title
+                attrs = {}
+                for token in info.split(" "):
+                    if "=" in token:
+                        k, v = token.split("=", 1)
+                        attrs[k.strip()] = v.strip().strip('"')
+
+                current_channel.update(attrs)
+                current_channel["name"] = name
+            except Exception:
+                current_channel["name"] = "Unknown"
+
         elif line.startswith("http"):
+            # Stream link
             current_channel["link"] = line.strip()
             channels.append(current_channel)
             current_channel = {}
@@ -55,4 +70,4 @@ def generate_formatted_playlist():
     print(f"📊 Total channels: {len(channels)}")
 
 if __name__ == "__main__":
-    generate_formatted_playlist()
+    generate_formatted_json()
