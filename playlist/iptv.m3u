@@ -10,39 +10,39 @@ https://owrcovcrpy.gpcdn.net/bpk-tv/1707/output/index.mpd
 #EXTINF:-1 tvg-id="2" tvg-name="LALIGA Live 1" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1758717213355.png" tvg-chno="2" group-title="Sports",LALIGA Live 1
 https://owrcovcrpy.gpcdn.net/bpk-tv/1730/output/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
+#KODIPROP:inputstream.adaptive.license_key=https://akashgo.rootmaster.xyz/license.php?cid=89|Content-Type=application/octet-stream&
+#EXTINF:-1 tvg-id="3" tvg-name="Star Sports Select 2 HD" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1735045174734.png" tvg-chno="3" group-title="Sports",Star Sports Select 2 HD
+https://owrcovcrpy.gpcdn.net/bpk-tv/1710/output/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://akashgo.rootmaster.xyz/license.php?cid=154|Content-Type=application/octet-stream&
-#EXTINF:-1 tvg-id="3" tvg-name="Star Sports 1 HD" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1754631932246.png" tvg-chno="3" group-title="Sports",Star Sports 1 HD
+#EXTINF:-1 tvg-id="4" tvg-name="Star Sports 1 HD" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1754631932246.png" tvg-chno="4" group-title="Sports",Star Sports 1 HD
 https://owrcovcrpy.gpcdn.net/bpk-tv/1720/output/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://akashgo.rootmaster.xyz/license.php?cid=117|Content-Type=application/octet-stream&
-#EXTINF:-1 tvg-id="4" tvg-name="Sony Sports TEN 2" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1762850019257.png" tvg-chno="4" group-title="Sports",Sony Sports TEN 2
+#EXTINF:-1 tvg-id="5" tvg-name="Sony Sports TEN 2" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1762850019257.png" tvg-chno="5" group-title="Sports",Sony Sports TEN 2
 https://owrcovcrpy.gpcdn.net/bpk-tv/1726/output/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://akashgo.rootmaster.xyz/license.php?cid=87|Content-Type=application/octet-stream&
-#EXTINF:-1 tvg-id="5" tvg-name="Star Sports Select 1 HD" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1735043602147.png" tvg-chno="5" group-title="Sports",Star Sports Select 1 HD
+#EXTINF:-1 tvg-id="6" tvg-name="Star Sports Select 1 HD" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1735043602147.png" tvg-chno="6" group-title="Sports",Star Sports Select 1 HD
 https://owrcovcrpy.gpcdn.net/bpk-tv/1708/output/index.mpd
-#EXTINF:-1 tvg-id="6" tvg-name="Somoy TV" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560559088.png" tvg-chno="6" group-title="News",Somoy TV
+#EXTINF:-1 tvg-id="7" tvg-name="Somoy TV" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560559088.png" tvg-chno="7" group-title="News",Somoy TV
 https://owrcovcrpy.gpcdn.net/bpk-tv/1702/output/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://akashgo.rootmaster.xyz/license.php?cid=164|Content-Type=application/octet-stream&
-#EXTINF:-1 tvg-id="7" tvg-name="Star Sports 2 HD" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1766036289415.png" tvg-chno="7" group-title="Sports",Star Sports 2 HD
+#EXTINF:-1 tvg-id="8" tvg-name="Star Sports 2 HD" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1766036289415.png" tvg-chno="8" group-title="Sports",Star Sports 2 HD
 https://owrcovcrpy.gpcdn.net/bpk-tv/1728/output/index.mpd
-#EXTINF:-1 tvg-id="8" tvg-name="Jamuna TV" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560213832.png" tvg-chno="8" group-title="News",Jamuna TV
+#EXTINF:-1 tvg-id="9" tvg-name="Jamuna TV" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1735560213832.png" tvg-chno="9" group-title="News",Jamuna TV
 https://owrcovcrpy.gpcdn.net/bpk-tv/1701/output/index.m3u8
-#EXTINF:-1 tvg-id="9" tvg-name="Deepto TV HD" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1742713000749.png" tvg-chno="9" group-title="Entertainment",Deepto TV HD
+#EXTINF:-1 tvg-id="10" tvg-name="Deepto TV HD" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1742713000749.png" tvg-chno="10" group-title="Entertainment",Deepto TV HD
 https://owrcovcrpy.gpcdn.net/bpk-tv/1711/output/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://akashgo.rootmaster.xyz/license.php?cid=118|Content-Type=application/octet-stream&
-#EXTINF:-1 tvg-id="10" tvg-name="Sony Sports TEN 1" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1762853147045.png" tvg-chno="10" group-title="Sports",Sony Sports TEN 1
+#EXTINF:-1 tvg-id="11" tvg-name="Sony Sports TEN 1" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1762853147045.png" tvg-chno="11" group-title="Sports",Sony Sports TEN 1
 https://owrcovcrpy.gpcdn.net/bpk-tv/1719/output/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://akashgo.rootmaster.xyz/license.php?cid=153|Content-Type=application/octet-stream&
-#EXTINF:-1 tvg-id="11" tvg-name="Ten Cricket" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1745304841482.png" tvg-chno="11" group-title="Sports",Ten Cricket
+#EXTINF:-1 tvg-id="12" tvg-name="Ten Cricket" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1745304841482.png" tvg-chno="12" group-title="Sports",Ten Cricket
 https://owrcovcrpy.gpcdn.net/bpk-tv/1727/output/index.mpd
-#KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
-#KODIPROP:inputstream.adaptive.license_key=https://akashgo.rootmaster.xyz/license.php?cid=89|Content-Type=application/octet-stream&
-#EXTINF:-1 tvg-id="12" tvg-name="Star Sports Select 2 HD" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1735045174734.png" tvg-chno="12" group-title="Sports",Star Sports Select 2 HD
-https://owrcovcrpy.gpcdn.net/bpk-tv/1710/output/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=com.widevine.alpha
 #KODIPROP:inputstream.adaptive.license_key=https://akashgo.rootmaster.xyz/license.php?cid=116|Content-Type=application/octet-stream&
 #EXTINF:-1 tvg-id="13" tvg-name="Sony Sports TEN 5" tvg-country="BD" tvg-logo="https://tstatic.akash-go.com/cms-ui/images/custom-content/1739906861365.png" tvg-chno="13" group-title="Sports",Sony Sports TEN 5
